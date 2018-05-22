@@ -9,11 +9,11 @@ module.exports = function(app) {
     .get(register.list_all_register)
     .post(register.create_user_register);
 
-  app.route('/registrations/:registrationId')
+  app.route('/registrations/:_id')
     .get(register.read_user_register)
     .put(register.update_user_register)
     .delete(register.delete_user_register);
 
-  app.route('/login')
+  app.route('/login/:_id')
       .post(register.login);
 };

@@ -15,7 +15,6 @@ var RegistrationSchema = new Schema({
     type: String,
     default:'',
     required:true,
-    index: {unique: true}
   },
   password: {
     type: String,
@@ -43,19 +42,19 @@ var RegistrationSchema = new Schema({
   },
   spinId: {
     type: String,
-    default: '',
+    default: '0',
     required: true ,
     index: {unique: true}
   },
   videoId: {
     type: String,
-    default: '',
+    default: '0',
     required: true ,
     index: {unique: true}
   },
   coinId: {
     type: Number,
-    default: '200',
+    default: '2000',
     required: true ,
     index: {unique: true}
   },
