@@ -1,6 +1,6 @@
 /*
 File: appConfig.js
-App Name: Venus Stock Manager
+App Name: Ludo Game
 Purpose: Configuration Part for Server and Database
 Created By: Hetal Thakkar */
 
@@ -12,15 +12,13 @@ module.exports ={
           "authDb"	: 'admin',
           "url"		  : 'mongodb://localhost:27017/meandemo',
           "host"    : 'localhost',
-          // "host"		: '52.66.157.107',
-          // "user"		: "venus",
-          // "passkey"	: "venusBardoli",
+
         },
   "server": {       //Server Configuration
           // "name":"Venus Stock Manager",
           "port":4000
         },
-  // "token": {
-  //         "secret": "venusjewellery"
-  //       }
+  "token": {
+          "secret": "ludogamesecretkey"
+        }
 }

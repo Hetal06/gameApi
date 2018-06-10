@@ -17,13 +17,12 @@ exports.login = function(req , res){
   	let requestedValues = req.body;
     console.log("login requestedValues" , requestedValues);
 
-  if(requestedValues.userName && requestedValues.pwd){
-    console.log("requestedValues.userName :",requestedValues.userName ,"requestedValues.pwd:",requestedValues.pwd);
-    Registrations.findOne({ $or: [{"userId": requestedValues.userName},{"email": requestedValues.email}]}).then(function (result) {
+    if(requestedValues.userName && requestedValues.pwd){
+      console.log("requestedValues.userName :",requestedValues.userName ,"requestedValues.pwd:",requestedValues.pwd);
+      Registrations.findOne({ $or: [{"userId": requestedValues.userName},{"email": requestedValues.email}]}).then(function (result) {
       console.log("result",result);
-  });
-}
-
+    });
+  }
 }
 
 exports.read_user_register = function(req, res) {
